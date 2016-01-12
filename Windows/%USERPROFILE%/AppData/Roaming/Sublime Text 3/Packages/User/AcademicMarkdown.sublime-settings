@@ -1,0 +1,11 @@
+{
+
+
+	"color_scheme": "Packages/User/Markdown-mickley.tmTheme",
+	"wrap_width": 120,
+	"rulers": [-10,130],
+
+	// Line
+	"line_numbers": true,
+	"highlight_line": false,
+}
