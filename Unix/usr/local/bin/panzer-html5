@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Get the filename passed to panzer-make
+file=$1
+
+# Get the directory name
+path=${file%/*}
+
+# Get the full filename
+filename=${file##*/}
+
+# Get the filename without extension
+basename="${filename%.*}"
+
+# Get the extension
+extension="${filename##*.}"
+
+# Generate pdf with panzer
+panzer -f markdown+tex_math_double_backslash -t html5 -o "$path/$basename.pdf" --data-dir="$path" "$file"
