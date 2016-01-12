@@ -1,0 +1,18 @@
+// Build system for markdown > panzer > pandoc > word
+// For more info see:
+// http://laravelista.com/markdown-to-word-sublime-text-build-system/
+// http://plaintext-productivity.net/2-05-how-to-set-up-sublime-text-for-markdown-export-to-word.html
+// http://sublime-text-unofficial-documentation.readthedocs.org/en/latest/reference/build_systems.html
+// https://github.com/msprev/panzer
+
+{
+	"shell": false,
+	"path": "/usr/local/bin:/usr/local/texlive/2013basic/bin/universal-darwin:",
+	"osx": {
+    	"cmd":["panzer-make", "$file"]
+	},
+	"working_dir": "$file_path",
+    "selector": ["text.html.markdown"]
+}
+
+
